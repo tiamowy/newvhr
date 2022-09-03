@@ -42,7 +42,7 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
             } catch (IOException e) {
             }finally {
                 String code = loginData.get("code");
-                checkCode(response, code, verify_code);
+//                checkCode(response, code, verify_code);
             }
             String username = loginData.get(getUsernameParameter());
             String password = loginData.get(getPasswordParameter());
