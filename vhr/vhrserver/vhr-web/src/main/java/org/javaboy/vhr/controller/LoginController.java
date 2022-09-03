@@ -36,4 +36,9 @@ public class LoginController {
         session.setAttribute("verify_code", text);
         VerificationCode.output(image,resp.getOutputStream());
     }
+
+    @GetMapping("verifyCodeText")
+    public String verifyCodeText(HttpServletRequest request, HttpServletResponse resp) {
+        return request.getSession(true).getAttribute("verify_code").toString();
+    }
 }
